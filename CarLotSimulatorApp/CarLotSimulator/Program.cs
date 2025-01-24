@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CarLotSimulator
 {
@@ -28,6 +29,50 @@ namespace CarLotSimulator
             //It should have at least one property: a List of cars
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
+            {
+                CarLot carLot = new CarLot(); // small error here had to make sure CarLot was spelled correctly in the class created
+//car 1 set up
+                Car car1 = new Car
+                {
+                    Year = 2020,
+                    Make = "Toyota",
+                    Model = "Corolla",
+                    EngineNoise = "Vroom",
+                    HonkNoise = "Beep",
+                    IsDriveable = true
+                };
+                car1.MakeEngineNoise();
+                car1.MakeHonkNoise();
+//car 2 setup
+                Car car2 = new Car();
+                car2.Year = 2021;
+                car2.Make = "Honda";
+                car2.Model = "Civic";
+                car2.EngineNoise = "Zoom";
+                car2.HonkNoise = "Honk";
+                car2.IsDriveable = true;
+                car2.MakeEngineNoise();
+                car2.MakeHonkNoise();
+//car 3 set up
+                Car car3 = new Car();
+                car3.Year = 2022;
+                car3.Make = "Ford";
+                car3.Model = "Mustang";
+                car3.EngineNoise = "Roar";
+                car3.HonkNoise = "Toot";
+                car3.IsDriveable = true;
+                car3.MakeEngineNoise();
+                car3.MakeHonkNoise();
+
+                carLot.Cars.Add(car1);
+                carLot.Cars.Add(car2);
+                carLot.Cars.Add(car3);
+
+                foreach (Car car in carLot.Cars) //foreach loop for the cars to go through
+                {
+                    Console.WriteLine($"Year: {car.Year}, Make: {car.Make}, Model: {car.Model}");
+                }
+            }
         }
     }
 }
