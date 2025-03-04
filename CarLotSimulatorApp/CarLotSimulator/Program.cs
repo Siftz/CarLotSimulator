@@ -30,7 +30,7 @@ namespace CarLotSimulator
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
             
-            CarLot carLot = new CarLot(); // small error here had to make sure CarLot was spelled correctly in the class created
+            CarLot carLot = new CarLot(); 
 //car 1 set up
             Car car1 = new Car
             {
@@ -41,8 +41,10 @@ namespace CarLotSimulator
                 HonkNoise = "Beep",
                 IsDriveable = true
             };
-            car1.MakeEngineNoise();
-            car1.MakeHonkNoise();
+            Console.WriteLine($"Number of cars in lot: {CarLot.numberOfCars}");
+            
+            //car1.MakeEngineNoise();
+            //car1.MakeHonkNoise();
 //car 2 setup
             Car car2 = new Car();
             car2.Year = 2021;
@@ -51,8 +53,9 @@ namespace CarLotSimulator
             car2.EngineNoise = "Zoom";
             car2.HonkNoise = "Honk";
             car2.IsDriveable = true;
-            car2.MakeEngineNoise();
-            car2.MakeHonkNoise();
+            Console.WriteLine($"Number of cars in lot: {CarLot.numberOfCars}");
+            //car2.MakeEngineNoise();
+            //car2.MakeHonkNoise();
 //car 3 set up
             Car car3 = new Car();
             car3.Year = 2022;
@@ -61,8 +64,9 @@ namespace CarLotSimulator
             car3.EngineNoise = "Roar";
             car3.HonkNoise = "Toot";
             car3.IsDriveable = true;
-            car3.MakeEngineNoise();
-            car3.MakeHonkNoise();
+            Console.WriteLine($"Number of cars in lot: {CarLot.numberOfCars}");
+            //car3.MakeEngineNoise();
+            //car3.MakeHonkNoise(); //commented out sounds for updated exercise
 
             carLot.Cars.Add(car1);
             carLot.Cars.Add(car2);

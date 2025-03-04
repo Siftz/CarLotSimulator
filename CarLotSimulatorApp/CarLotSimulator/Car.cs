@@ -10,6 +10,11 @@ public class Car
     public string HonkNoise { get; set; }
     public bool IsDriveable { get; set; }
 
+    public Car() // Constructor to increment each time a car is made
+    {
+        CarLot.numberOfCars++;
+    }
+
     public void MakeEngineNoise()
     {
         Console.WriteLine(EngineNoise);
